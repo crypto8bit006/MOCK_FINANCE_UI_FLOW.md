@@ -1,0 +1,106 @@
+import streamlit as st
+import pandas as pd
+
+# Set up a professional page envelope
+st.set_page_config(page_title="Saifuro PM Portfolio Hub", page_icon="💼", layout="wide")
+
+# Custom HTML styling for clean scannability
+st.markdown("""
+    <style>
+    .main-title { font-size: 32px; font-weight: bold; color: #1E3A8A; margin-bottom: 5px; }
+    .sub-title { font-size: 16px; color: #4B5563; margin-bottom: 25px; }
+    .section-header { font-size: 22px; font-weight: bold; color: #1E3A8A; margin-top: 20px; margin-bottom: 10px; }
+    .card { background-color: #F3F4F6; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 5px solid #3B82F6; }
+    </style>
+""", unsafe_allow_html=True)
+
+st.markdown('<div class="main-title">💼 Saifuro Product Manager Portfolio Asset</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-title">Designed by Anirban Majumder • Focused on Developer, Seller & Finance Team Happiness</div>', unsafe_allow_html=True)
+
+# Navigation tabs focusing on the 3 core platform user groups
+tab1, tab2, tab3 = st.tabs(["📊 Finance Team Control UI", "💬 Developer Interview Loop", "🚀 Customer Onboarding Checklist"])
+
+with tab1:
+    st.markdown('<div class="section-header">🛡️ Scenario: Human-Approved Mandate & Ledger Sync</div>', unsafe_allow_html=True)
+    st.write("Finance controllers need an intuitive visual matrix to manage machine-to-machine spending caps without tracking raw JSON block files.")
+    
+    st.info("**Active Guardrails: Autonomous Procurement Agent**")
+    
+    # Human-approved mandate display
+    mandate_data = {
+        "Agent Wallet Address": ["0x7a8b...321f"],
+        "Chain Layer": ["Base Onchain Escrow"],
+        "Approved Mandate": ["Automated API Scraping Credits"],
+        "Max Single Tx Limit": ["50.00 USDC"],
+        "Weekly Reset Cap": ["500.00 USDC"]
+    }
+    st.table(pd.DataFrame(mandate_data))
+    
+    st.markdown('<div class="section-header">🛑 Recent Guardian Interceptions (Velocity Rules)</div>', unsafe_allow_html=True)
+    st.write("When an AI agent breaks an execution loop, the Spend Guard intercepts the request instantly before capital balances drop.")
+    
+    # Automated interceptions overview
+    intercept_data = {
+        "Timestamp (UTC)": ["2026-10-21 14:02:11", "2026-10-21 14:05:00"],
+        "Attempted Amount": ["5.00 USDC", "75.00 USDC"],
+        "Target Recipient": ["Alchemy_API_Node", "OpenAI_LLM_Refuel"],
+        "Guard Verdict": ["❌ BLOCKED", "❌ BLOCKED"],
+        "Triggered Violation": ["Velocity Spike: 12 requests/sec", "Out of Mandate Limit (>50 USDC)"],
+        "Action Status": ["Auto-Throttled (Safe)", "Requires Human Override Signature"]
+    }
+    st.table(pd.DataFrame(intercept_data))
+
+with tab2:
+    st.markdown('<div class="section-header">🎤 Developer Discovery & Feedback Protocol</div>', unsafe_allow_html=True)
+    st.write("Practical user research queries used on regular customer discovery calls to spot implementation friction for engineering teams.")
+    
+    st.markdown("""
+    <div class="card">
+        <strong>1. The Sandbox Experience</strong><br>
+        <em>"When you first initiated our self-serve local sandbox environment, what was the exact point of friction? Did the logs clearly outline your policy constraints?"</em>
+    </div>
+    <div class="card">
+        <strong>2. Latency & Verification Friction</strong><br>
+        <em>"Because Saifuro compares tracking requests synchronously with a human mandate, did your agent encounter execution lag while waiting for the cryptographically signed verdict?"</em>
+    </div>
+    <div class="card">
+        <strong>3. Escrow Fallbacks</strong><br>
+        <em>"Your agent is running on our Solana/Base escrow settlements. How comfortable are you with the programmatic fallback states if a trade loop breaks mid-transaction?"</em>
+    </div>
+    """, unsafe_allow_html=True)
+
+with tab3:
+    st.markdown('<div class="section-header">📋 Tri-Persona Client Onboarding Roadmap</div>', unsafe_allow_html=True)
+    st.write("A user-success map built to balance fast system setups for developers with risk transparency for finance heads.")
+    
+    st.checkbox("🚀 **Phase 1 (Developer):** Initialize local self-serve sandbox configuration in under 5 minutes with clear console error logs.")
+    st.checkbox("💼 **Phase 2 (Finance Team):** Configure first human-in-the-loop mandate rulebook with defined USDC parameters.")
+    st.checkbox("🔐 **Phase 3 (Protocol Health):** Deploy live signed verdicts V2 and connect client to immediate technical Telegram/Slack alerting window.")
+
+# Safe Escrow Triage Section at the bottom
+st.markdown("---")
+st.markdown('<div class="section-header">🚨 Customer Triage Simulator: Agent Stuck in Escrow Loop</div>', unsafe_allow_html=True)
+st.write("Simulate how a Customer-Focused PM steps in when a high-value agent's onchain transaction encounters a runtime lock.")
+
+with st.expander("👉 Open Live Triage Support Template"):
+    st.markdown("""
+    **Customer Persona:** Lead Platform Engineer at a Large API Aggregator Firm  
+    **The Incident:** Counterparty agent crashed mid-trade; 2,500 USDC locked inside Base contract fallback state.  
+    
+    ```text
+    Hi [Developer Name],
+
+    I see your automated execution loop is currently locked at block layer on Base. I completely understand how critical this settlement timeline is for your pipeline—our core mission is keeping your agents fluid and safe.
+
+    Here is what is happening and how we are clearing this up for you right now:
+    1. What the Guard Caught: The counterparty agent encountered a non-zero exit code, causing our Base escrow contract to freeze the transaction state to protect your funds from an irregular liquidation cycle.
+    2. Instant Safety Net: Your 2,500 USDC is completely secure. Because we never hold customer funds, the contract's built-in cryptographic timeout window is already ticking. 
+    3. The Direct Path Forward: Our protocol engineer is looking at the state signature right now. If the counterparty loop doesn't revive within 15 minutes, the onchain contract fallback will unlock, allowing your mandate to safely claim a clean refund.
+
+    I have set up a direct joint war-room thread with our engineers here so you can trace the state updates live. We've got your back!
+
+    Best regards,
+    Anirban Majumder
+    Product Manager, Saifuro
+    ```
+    """, unsafe_allow_html=True)
