@@ -1,0 +1,57 @@
+# Saifuro PM Asset: Tri-Persona User Happiness & Triage Playbook
+**Author:** Anirban Majumder  
+**Target Focus:** Balancing Developer, Seller, and Finance Team Product Decisions for Saifuro Engine Core
+
+---
+
+## 📊 Section 1: Mock UI Concept — Finance Mandate Ledger
+*Finance controllers need intuitive visual clarity to manage machine-to-machine spending caps without tracking raw JSON block files.*
+
+### 🔐 Active Human-Approved Mandates
+
+| Agent Wallet Address | Chain Layer | Approved Mandate | Max Single Tx Limit | Weekly Reset Cap |
+| :--- | :--- | :--- | :--- | :--- |
+| `0x7a8b...321f` | Base Onchain Escrow | Automated API Scraping Credits | 50.00 USDC | 500.00 USDC |
+
+### 🛑 Recent Guardian Interceptions (Velocity Violations)
+*When an AI agent breaks an execution loop, the Spend Guard intercepts the request instantly before capital balances drain.*
+
+| Timestamp (UTC) | Attempted Amount | Target Recipient | Guard Verdict | Triggered Violation | Action Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-10-21 14:02:11 | 5.00 USDC | `Alchemy_API_Node` | ❌ BLOCKED | Velocity Spike: 12 requests/sec | Auto-Throttled (Safe) |
+| 2026-10-21 14:05:00 | 75.00 USDC | `OpenAI_LLM_Refuel` | ❌ BLOCKED | Out of Mandate Limit (>50 USDC) | Requires Human Signature |
+
+---
+
+## 📋 Section 2: Tri-Persona Client Onboarding Roadmap
+*A user-success map built to balance fast system setups for developers with risk transparency for finance heads.*
+
+- [x] 🚀 **Phase 1 (Developer):** Initialize local self-serve sandbox configuration in under 5 minutes with clear console error logs.
+- [ ] 💼 **Phase 2 (Finance Team):** Configure first human-in-the-loop mandate rulebook with defined USDC parameters.
+- [ ] 🔐 **Phase 3 (Protocol Health):** Deploy live signed verdicts V2 and connect client to immediate technical Telegram/Slack alerting window.
+
+---
+
+## 🚨 Section 3: Customer Triage Simulator (Escrow Lockup Crisis)
+*Proactive customer success resolution template for when a high-value agent's onchain transaction encounters a runtime lock.*
+
+**Customer Persona:** Lead Platform Engineer at a Large API Aggregator Firm  
+**The Incident:** Counterparty agent crashed mid-trade; 2,500 USDC locked inside Base contract fallback state.  
+
+### Outbound Resolution Message:
+```text
+Hi [Developer Name],
+
+I see your automated execution loop is currently locked at the block layer on Base. I completely understand how critical this settlement timeline is for your pipeline—our core mission is keeping your agents fluid and safe.
+
+Here is what is happening and how we are clearing this up for you right now:
+1. What the Guard Caught: The counterparty agent encountered a non-zero exit code, causing our Base escrow contract to freeze the transaction state to protect your funds from an irregular liquidation cycle.
+2. Instant Safety Net: Your 2,500 USDC is completely secure. Because we never hold customer funds, the contract's built-in cryptographic timeout window is already ticking. 
+3. The Direct Path Forward: Our protocol engineer is looking at the state signature right now. If the counterparty loop doesn't revive within 15 minutes, the onchain contract fallback will unlock, allowing your mandate to safely claim a clean refund.
+
+I have set up a direct joint war-room thread with our engineers here so you can trace the state updates live. We've got your back!
+
+Best regards,
+Anirban Majumder
+Product Manager, Saifuro
+```
