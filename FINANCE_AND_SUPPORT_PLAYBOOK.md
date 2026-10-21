@@ -53,5 +53,5 @@ I have set up a direct joint war-room thread with our engineers here so you can 
 
 Best regards,
 Anirban Majumder
-Product Manager, Saifuro
+Product Manager
 ```
